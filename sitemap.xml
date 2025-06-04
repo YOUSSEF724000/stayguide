@@ -5,15 +5,15 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.stayguide.ma/logements</loc>
+    <loc>https://www.stayguide.ma/AGADIR/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.stayguide.ma/guide</loc>
+    <loc>https://www.stayguide.ma/GUIDE/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.stayguide.ma/a-propos</loc>
+    <loc>https://www.stayguide.ma/à propos/</loc>
     <priority>0.5</priority>
   </url>
 </urlset>
