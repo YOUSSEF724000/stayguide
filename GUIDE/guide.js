@@ -320,3 +320,16 @@ window.onload = function() {
   document.addEventListener('dragstart', function(e) {
     e.preventDefault();
   });
+
+
+
+
+
+<script>
+document.getElementById("profitez-guide").addEventListener("click", function() {
+  gtag('event', 'click_profitez_guide', {
+    event_category: 'Bouton',
+    event_label: 'Profitez du guide'
+  });
+});
+</script>
