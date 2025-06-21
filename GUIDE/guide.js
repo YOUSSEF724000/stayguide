@@ -58,8 +58,8 @@ window.addEventListener("scroll", function () {
   lastScrollTop = scrollTop;
 });
 
-
 // detail
+
 function toggleDetails(event) {
     const section = event.target.closest(".section");
     if (!section) return;
@@ -121,7 +121,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 //ouvrir et aller
 window.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash;
@@ -150,6 +149,7 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
 
 
 
