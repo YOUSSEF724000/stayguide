@@ -61,18 +61,12 @@ window.addEventListener("scroll", function () {
 
 // detail
 function toggleDetails(event) {
-    // Trouver la section la plus proche à partir de l'élément cliqué
     const section = event.target.closest(".section");
     if (!section) return;
 
-    // Empêcher l'ouverture/fermeture si on clique sur une autre section
-    if (!section.classList.contains("section")) return;
-
-    // Trouver le bloc de détails à l'intérieur de cette section
     const details = section.querySelector(".details");
     if (!details) return;
 
-    // Ouvrir ou fermer uniquement cette section
     if (section.classList.contains("open")) {
         details.style.maxHeight = "0";
         details.style.opacity = "0";
@@ -85,6 +79,44 @@ function toggleDetails(event) {
         section.classList.add("open");
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+
+    // Cas avec ancre dans l’URL (#id)
+    if (hash) {
+        const section = document.querySelector(hash);
+        if (section && section.classList.contains("section")) {
+            const details = section.querySelector(".details");
+            if (details) {
+                details.style.display = "block";
+                details.style.maxHeight = `${details.scrollHeight}px`;
+                details.style.opacity = "1";
+                section.classList.add("open");
+
+                setTimeout(() => {
+                    const offsetTop = section.getBoundingClientRect().top + window.scrollY - 380;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }, 100);
+            }
+        }
+    } else {
+        // Ouvre la première section (par exemple, #plages)
+        const firstSection = document.querySelector(".section");
+        if (firstSection) {
+            const details = firstSection.querySelector(".details");
+            if (details) {
+                details.style.display = "block";
+                details.style.maxHeight = `${details.scrollHeight}px`;
+                details.style.opacity = "1";
+                firstSection.classList.add("open");
+            }
+        }
+    }
+});
 
 
 
