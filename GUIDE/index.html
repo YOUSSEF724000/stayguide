@@ -545,11 +545,79 @@ Notre guide reste en contact avec vous pour :
       
         
       
-        <div id="profitez-guide" class="guide-cta">
-          <a  href="https://wa.me/+212660024649?text= Bonjour, je souhaite profitez du guide personnel" class="cta-button">Profitez du guide personnel</a>
-        </div>
-      </div>
+            <!-- Bouton flottant -->
+<!-- Emplacement où le bouton doit "se poser" -->
+<div id="stop-zone" style="margin-top: 40px; height: 100px;"></div>
+
+<!-- Bouton flottant -->
+<div id="profitez-guide">
+  <a href="#" class="cta-button" id="cta-btn">Découvrir le guide personnel</a>
+</div>
       
+
+</div>
+
+
+
+<script>
+ const guide = document.getElementById('profitez-guide');
+  const stopZone = document.getElementById('stop-zone');
+  const btn = document.getElementById('cta-btn');
+
+  function updateButtonState() {
+    const stopY = stopZone.getBoundingClientRect().top + window.scrollY;
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const fullHeight = document.documentElement.scrollHeight;
+    const scrolledRatio = (scrollTop + windowHeight) / fullHeight;
+
+    // Changer texte selon position de scroll
+    if (scrolledRatio >= 0.82) {
+      btn.textContent = "Demandez votre guide personnel";
+    } else {
+      btn.textContent = "Découvrez le guide personnel";
+    }
+
+    // Fixer le bouton si on dépasse la zone
+    if (scrollBottom >= stopY + 20) {
+      guide.classList.add('stopped');
+      guide.style.top = `${stopY + 20}px`;
+    } else {
+      guide.classList.remove('stopped');
+      guide.style.top = '';
+    }
+  }
+
+  window.addEventListener('scroll', updateButtonState);
+  window.addEventListener('load', updateButtonState); // au chargement aussi
+
+  // Clic intelligent
+btn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const scrollTop = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const fullHeight = document.documentElement.scrollHeight;
+  const scrolledRatio = (scrollTop + windowHeight) / fullHeight;
+
+  if (scrolledRatio < 0.82) {
+    // Calculer la position correspondant à 90% du total scrollable
+    const targetScroll = fullHeight * 0.92 - windowHeight;
+
+    // S'assurer que targetScroll est positif
+    const finalScroll = Math.max(0, targetScroll);
+
+    window.scrollTo({
+      top: finalScroll,
+      behavior: "smooth"
+    });
+  } else {
+    window.open("https://wa.me/+212660024649?text=Bonjour, je souhaite profitez du guide personnel", "_blank");
+  }
+});
+
+</script>
       <style>
           .guide-container {
         max-width: 900px;
@@ -569,18 +637,18 @@ Notre guide reste en contact avec vous pour :
       
       .guide-header p {
         font-size: 1.1rem;
-        margin-top: 10px;
+        
         color: #555;
       }
       
       .guide-section {
-        margin-top: 40px;
+        margin-top: 30px;
       }
       
       .guide-section h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #444;
-        margin-bottom: 10px;
+        
       }
       
        p, .guide-section ul {
@@ -602,7 +670,41 @@ Notre guide reste en contact avec vous pour :
         margin-top: 50px;
       }
       
-      .cta-button {
+
+
+
+
+
+
+
+
+
+
+      
+     /* Bouton fixe animé */
+/* Bouton flottant en bas */
+#profitez-guide {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  animation: float 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+/* Quand le bouton est "posé" */
+#profitez-guide.stopped {
+  position: absolute;
+  bottom: auto;
+  top: 0; /* sera défini dynamiquement en JS */
+  left: 50%;
+  transform: translateX(-50%);
+  animation: none;
+}
+
+/* Style du bouton */
+.cta-button {
   background-color: rgb(72, 204, 209);
   color: white;
   padding: 14px 28px;
@@ -615,19 +717,27 @@ Notre guide reste en contact avec vous pour :
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: inline-block;
-  transform: scale(1);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px);
+  }
 }
 
 .cta-button:hover {
   background-color: #005f56;
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:active {
   transform: scale(0.98);
-  padding: 15px 29px; /* +1px sur tous les côtés */
+  padding: 15px 29px;
 }
+
 
       @media screen and (max-width: 1000px) {
         
@@ -636,28 +746,28 @@ Notre guide reste en contact avec vous pour :
         color: #00796b;
       }
         .guide-header p {
-        font-size: 2rem;
+        font-size: 30px;
         text-align: justify;
       }
       .guide-section h2 {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
         
       }
        p, .guide-section ul {
-        font-size: 2rem;
-        line-height: 1.6;
+        font-size: 30px;
+        line-height: 1.9;
         text-align: justify;
       }
       .cta-button {
   
-  padding: 14px 28px;
-  font-size: 1.7rem;
-  
+  padding: 16px 25px;
+  font-size: 1.6rem;
+  margin: auto;
 }
       }
 
       
-      </style>  
+      </style> 
     
         
         
