@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVLYZKLKX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PYVLYZKLKX');
+</script>
+    <title>À propos de StayGuide - Locations de vacances et guide de voyage au Maroc</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Marnissi Youssef">
+  <meta name="description" content="Découvrez l'histoire de StayGuide, notre mission et l'équipe derrière les locations de vacances au Maroc. Apprenez à nous connaître et pourquoi nous sommes votre meilleur choix pour un séjour inoubliable.">
+  <link rel="icon" type="image/png" sizes="64x64" href="../images/logo-64x64.png">
+  <link rel="canonical" href="https://www.stayguide.ma/a-propos/">
+  
+  <!-- Open Graph (OG) pour les réseaux sociaux -->
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="À propos de StayGuide - Location de maisons de vacances au Maroc" />
+  <meta property="og:description" content="Apprenez-en plus sur StayGuide, notre vision et l'équipe dédiée à offrir des locations de vacances exceptionnelles au Maroc." />
+  <meta property="og:image" content="https://www.stayguide.ma/images/a_propos_cover.jpg" />
+  <meta property="og:url" content="https://www.stayguide.ma/a-propos/" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Stay Guide",
+  "url": "https://www.stayguide.ma/a-propos/",
+  "logo": "https://www.stayguide.ma/images/logo-64x64.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Stay Guide",
+  "url": "https://www.stayguide.ma/a-propos/",
+  "logo": "https://www.stayguide.ma/images/logo-64x64.png",
+  "sameAs": [
+    "https://www.facebook.com/StayGuide",
+    "https://www.instagram.com/stayguide.ma"
+  ]
+}
+</script>
+  <!-- Twitter Card pour l'affichage sur Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="À propos de StayGuide - Location de maisons de vacances au Maroc">
+  <meta name="twitter:description" content="Découvrez StayGuide, notre histoire, notre équipe, et notre mission pour offrir les meilleures locations de vacances au Maroc.">
+  <meta name="twitter:image" content="https://www.stayguide.ma/images/a_propos_cover.jpg">
+
+    <link rel="stylesheet" href="propos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="javascript" href="propos.js">
+</head>
+
+<body class="body">
+     <div id="loader">
+        <div class="spinner"></div>
+      </div>
+      <div class="header" id="mainHeader">
+    <img id="logo" class="logo" src="../images/okri.png" alt="stayguide"/>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="header-links" id="navLinks">
+        <a href="../">Accueil</a>
+
+        <div class="dropdown" id="dropdown-hebergements">
+      <a href="javascript:void(0)" onclick="toggleDropdown('hebergementsDropdown', 'dropdown-hebergements')">
+        <span class="dropdown-toggle">
+          Hébergements   
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+          </svg>
+        </span>
+      </a>
+      <div class="fullwidth-dropdown-content" id="hebergementsDropdown">
+        <a href="../locations-vacances-agadir/">Agadir</a>
+        <a href="../locations-vacances-marrakech/">Marrakech</a>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-guide">
+      <a href="javascript:void(0)" onclick="toggleDropdown('guideDropdown', 'dropdown-guide')">
+        <span class="dropdown-toggle">
+          Guide
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+          </svg>
+        </span>
+      </a>
+      <div class="fullwidth-dropdown-content" id="guideDropdown">
+        <a href="../guide-agadir/">Agadir</a>
+        <a href="../guide-marrakech/">Marrakech</a>
+      </div>
+    </div>
+
+        <a href="../a-propos/">À propos</a>
+    </div>
+</div>
+    
+    <main class="propos">
+        <section class="StayGuide">
+            <h2>À propos de <span translate="no">StayGuide</span></h2>
+        </section>
+        <div class="titt"><p>StayGuide est une plateforme marocaine qui connecte les voyageurs à des hébergements authentiques, et propose en complément un accompagnement personnalisé grâce à un guide local indépendant. Nous facilitons la recherche de maisons de vacances vérifiées, avec un système de réservation simple et un paiement sécurisé. En parallèle, notre guide vous aide à découvrir les meilleures expériences locales, pour un séjour enrichissant, serein et sans mauvaises surprises.</p></div>
+        <div class="section" onclick="toggleDetails(event, this)">
+            <h3><span translate="no">Stay</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+            <p class="details">En collaboration directe avec des hôtes locaux, nous vous aidons à trouver facilement un hébergement fiable et adapté à vos attentes. Notre plateforme regroupe des logements vérifiés, avec des descriptions claires, des photos authentiques et toutes les informations utiles pour réserver en toute confiance. Grâce à un système de réservation simple et un paiement sécurisé, vous profitez d’un séjour sans stress, dès la recherche jusqu’à votre arrivée.</p>
+        </div>
+        <div class="section" onclick="toggleDetails(event, this)">
+            <h3><span translate="no">Guide</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+            <p class="details">Notre guide indépendant est conçu pour enrichir votre expérience au Maroc.
+Il vous accompagne dans la découverte des plus beaux sites, des plages aux montagnes, en passant par les souks et les villages authentiques. Vous y trouverez des recommandations d’activités, des adresses locales, des astuces pratiques et des itinéraires personnalisés pour explorer la ville selon vos envies. Accessible à tout moment, ce guide vous permet de voyager informé, librement, et de profiter pleinement de chaque moment de votre séjour.</p>
+        </div>
+        <div class="section" onclick="toggleDetails(event, this)">
+            <h3>FA questions<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+            
+            <p class="details"><span class="tit">Guide Perso</span>
+            <span class="color">- Que propose le service de guide ?</span><br>Nous vous accompagnons dans la découverte des meilleures expériences locales : plages, restaurants, activités, et plus d'autres, tout en vous aidant à éviter les pièges touristiques et les prix excessifs.<br><span class="color">- Comment bénéficier de ce service ?</span><br> Il vous suffit de cliquer sur le bouton en bas de la page Guide et de nous contacter via WhatsApp pour profiter d’un accompagnement dédié pendant votre séjour.<br><span class="color">- Est-ce que le service couvre toute la ville ?</span><br>Oui, notre équipe connaît en détail Agadir, Marrakech et leurs alentours. Vous serez orienté précisément, selon vos envies.<br>
+            <br>
+           <span class="tit">Hébergement Sélect</span>
+                <strong>Réservation</strong><br><span class="color">- Puis-je visiter la maison avant de réserver ?</span><br>Oui, vous pouvez visiter la maison en personne avec l'hôte avant de finaliser votre réservation.Cette étape vous permet de réserver en toute confiance.<br><strong>Paiement et Annulation</strong><br><span class="color"> - Quels modes de paiement acceptez-vous ?</span><br>Nous acceptons les paiements par virement bancaire ou par Paypal<span class="color"><br>- Dois-je payer la totalité du séjour à l’avance ?</span><br> Non, vous n’avez pas besoin de régler la totalité du séjour à l’avance. Seul un montant de 10% du prix de logement est demandé pour confirmer votre réservation. Le reste du paiement s’effectue en espèces le jour de votre arrivée.<br><span class="color">- Puis-je annuler ma réservation ? Y a-t-il des frais d’annulation ?</span><br>Oui, vous pouvez annuler votre réservation. Les frais de confirmation ne sont pas remboursables, mais ils seront crédités et applicables sur votre prochaine réservation sur notre site.<br><strong>Séjour</strong><br><span class="color">- Et si je rencontre un problème avec l’hôte à mon arrivée ?</span><br>En cas de problème lié à l’hôte ou au logement signalé dès votre arrivée, un remboursement complet du montant payé sera effectué.<br><span class="color">- À quelle heure puis-je arriver (check-in) et partir (check-out) ?</span><br>Les horaires exacts sont précisés pour chaque logement.<br><span class="color">- Que faire si je rencontre un problème pendant mon séjour ?</span><br>Vous pouvez contacter directement l'hôte ou notre service pour toute assistance.<br><strong>Autres Questions</strong><br><span class="color">- Puis-je prolonger mon séjour après réservation ?</span><br>Oui, sous réserve de disponibilité.<br><span class="color">- Y a-t-il des frais supplémentaires non indiqués dans le prix affiché ?</span><br>Non, tous les frais (y compris ménage et taxes) sont inclus dans le prix final affiché.
+            <br>
+    <a class="bttn"  href="https://wa.me/212660024649?" target="_blank" >
+      Support client via WhatsApp
+    </a>
+            </p>
+        
+        </div>
+        <div class="section" id="contact" onclick="toggleDetails(event, this)">
+            <h3>Contactez-nous<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+            <p class="details">Email : stayguidemaroc@gmail.com<br>Whatssap : 0660-024649<br>Adresse : MAROC </p>
+        </div>
+
+        <div class="section" id="conditions" onclick="toggleDetails(event, this)">
+            <h3>Conditions et politiques <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+            <p class="details">
+            - Vous pouvez consulter tous les logements disponibles directement sur notre site. Une fois que vous avez trouvé celui qui vous intéresse, il suffit de nous contacter sur WhatsApp pour confirmer votre réservation.<br>
+            - Pour bloquer un logement et garantir qu’il sera bien réservé pour vous, nous demandons un acompte équivalent au prix de deux nuits à payer à l’avance.<br>
+            - Si vous ne souhaitez pas payer l’acompte équivalent à deux nuits, pas de souci : vous serez simplement placé sur liste d’attente. Cela signifie que vous pourrez toujours prendre le logement le jour souhaité, à condition qu’il ne soit pas déjà réservé par un autre client confirmé.<br>
+            - Le paiement complet du logement se fait à votre arrivée, directement sur place, lors de la remise des clés.<br>
+            - Le montant versé pour la confirmation n'est pas remboursables, mais peut être réutilisé pour confirmer un autre logement ou une autre date si vous changez votre réservation.<br>
+            - Pour toute information complémentaire concernant un logement, vous pouvez nous contacter via WhatsApp.
+            - En cas de fausses déclarations ou si les informations fournies ne correspondent pas à celles du locataire, l'agence se réserve le droit d'annuler votre réservation le jour de votre location, sans remboursement.<br>
+            - En réservant via notre site, vous bénéficiez d’un guide personnel gratuit à votre choix pendant votre séjour à Agadir. Il vous accompagnera pour découvrir les meilleurs endroits où manger, sortir, et profiter de la ville.<br>
+            - Si vous souhaitez uniquement le service de guide (sans réserver un logement chez nous), ce service est disponible pour 149 DH.<br>
+            - Nous jouons le rôle d’intermédiaire entre vous et les hôtes. Les photos et les informations des logements sont fournies par nos partenaires et vérifiées régulièrement.<br>
+        </p></div>
+
+        
+        <div class="section" id="ajouter" onclick="toggleDetails(event, this)">
+  <h3>Mettez votre logement sur StayGuide<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+  <p class="details">
+    Faites partie des hébergements recommandés de Stayguide et bénéficiez d’une visibilité ciblée auprès de voyageurs à la recherche d’authenticité.  
+    <br> Pour connaître les étapes d’intégration et démarrer la procédure, contactez-nous directement.
+    <br><br>
+    <a class="bttn" href="https://wa.me/212660024649?text=Bonjour je souhaite mettre mon logement sur StayGuide" target="_blank" >
+      Nous contacter sur WhatsApp
+    </a>
+  </p>
+</div>
+
+        <div class="section" id="aide" onclick="toggleDetails(event, this)">
+            <h3>Aide et assistance <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="rgb(50, 50, 50)"><path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path></svg></h3>
+            <p class="details">-Besoin d’aide ? Notre équipe est disponible 7j/7 sur WhatsApp pour répondre à toutes vos questions avant, pendant et après votre réservation, contactez-nous sur WhatsApp.
+                <br>- Nous assurons un suivi personnalisé de chaque demande, accompagnant nos locataires depuis leur réservation jusqu’à la fin de leur séjour, pour une expérience sereine et encadrée.
+    <br>- Nous nous engageons à garantir une expérience sans souci. Si une erreur de notre part ou un problème avec l'agence affecte votre réservation, nous nous engageons à vous rembourser intégralement les frais payés au début.
+    <br>-Nos guides locaux vous assistent sur place : restaurants, activités, plages… vous serez entre de bonnes mains !</p>
+        </div>
+        
+    </main>
+
+
+
+
+    <script>
+        function toggleDetails(event, element) {
+    event.stopPropagation();
+
+    // Fermer toutes les autres sections
+    document.querySelectorAll(".section").forEach((section) => {
+        if (section !== element) {
+            section.classList.remove("open");
+            const details = section.querySelector(".details");
+            details.style.maxHeight = "0";
+            details.style.opacity = "0";
+            setTimeout(() => { details.style.display = "none"; }, 300);
+        }
+    });
+
+    // Ouvrir ou fermer la section cliquée
+    const details = element.querySelector(".details");
+    const svgIcon = element.querySelector("svg");
+
+    if (details.style.display === "block") {
+        details.style.maxHeight = "0";
+        details.style.opacity = "0";
+        setTimeout(() => { details.style.display = "none"; }, 300);
+        element.classList.remove("open");  // Retirer la classe pour la rotation
+    } else {
+        details.style.display = "block";
+        setTimeout(() => {
+            details.style.maxHeight = "3600px";
+            details.style.opacity = "1";
+        }, 10);
+        element.classList.add("open");  // Ajouter la classe pour la rotation
+    }
+}
+
+  // Ouvrir automatiquement les sections en fonction du hash de l'URL
+  window.onload = function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetSection = document.querySelector(hash);
+                if (targetSection) {
+                    toggleDetails(new Event('click'), targetSection);
+                    targetSection.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        };
+    </script>
+
+
+
+
+
+
+
+
+
+
+ <script src="propos.js"></script>
+</body>
+</html>
+
+
+

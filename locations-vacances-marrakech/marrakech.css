@@ -1,0 +1,483 @@
+html {
+  -webkit-text-size-adjust: 100%; /* Pour Safari iOS */
+  -ms-text-size-adjust: 100%;     /* Pour Internet Explorer */
+  text-size-adjust: 100%;         /* Standard */
+}
+.body{
+  margin: 0px;
+  background-color: rgb(235, 245, 250);
+  font-family: 'Poppins', sans-serif;
+  
+}
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.5s ease;
+}
+
+.spinner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(72, 209, 204, 0.2);
+  border-top: 6px solid rgb(72, 209, 204);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 20px rgba(72, 209, 204, 0.5);
+}
+
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* Supprimer l'effet bleu sur mobile (tap highlight) */
+
+button, .body, .header {
+  
+ -webkit-tap-highlight-color: transparent
+}
+.header {
+background-color: rgb(235, 245, 250);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px 20px;
+ font-size: 18px;
+ position: relative;
+ z-index: 2;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ width: 100%;
+}
+
+.logo {
+ width: 155px;
+ height: 65px;
+ cursor: pointer;
+ margin-left: 30PX;
+}
+
+.header-links {
+ display: flex;
+ margin-right: 40px;
+}
+
+.header-links a {
+ text-decoration: none;
+ color: black;
+ padding: 20px 15px;
+ margin-right: 10px;
+ 
+ font-weight: 500;
+ transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+ color: rgb(199, 87, 41);
+ 
+}
+
+.menu-toggle {
+ display: none;
+ font-size: 50px;
+ cursor: pointer;
+ 
+}
+
+#mainHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 0.5s;
+  z-index: 1000;
+  
+}
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+  margin-right: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  
+  transition: color 0.3s ease;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+  fill: currentColor;
+}
+
+.dropdown.open .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.fullwidth-dropdown-content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease, padding 0.3s ease;
+background-color: rgb(235, 245, 250);
+  width: 100%;
+  padding: 0 30px;
+  position: absolute;
+  top: 87px;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  opacity: 0;
+}
+
+.fullwidth-dropdown-content.showing {
+  opacity: 1;
+}
+
+.fullwidth-dropdown-content a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  width: 100%; /* occupe toute la largeur */
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+.fullwidth-dropdown-content a:hover {
+  color: rgb(199, 87, 41);
+  
+}
+
+
+@media screen and (max-width: 1000px) {
+.header-links {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    flex-direction: column;
+    position: absolute;
+    top: 140px;
+    right: 0px;
+  background-color: rgb(235, 245, 250);
+    width: 97%;
+    border-left: 5px solid #e67e22;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-links.showing {
+    max-height: 600px; /* ajuste selon la hauteur de ton menu */
+    opacity: 1;
+  }
+ 
+ .header-links a {
+     display: block;
+     padding: 20px;
+     margin-left: 30px;
+     font-size: 22px;
+     transition: color 0.3s ease, background-color 0.3s ease;
+ }
+ .logo {
+  width: 285px;
+   height: 120px;
+   cursor: pointer;
+   margin-left: 10PX;
+}
+ .menu-toggle {
+     display: block;
+     margin-right: 40px;
+ }
+
+ .fullwidth-dropdown-content {
+    position: static;
+    width: 100%;
+    top: auto;
+    left: auto;
+    box-shadow: none;
+    padding: 0;
+  }
+
+}
+
+
+
+
+
+    .bttn {
+  display: inline-block;
+  padding: 15px 25px;
+  
+  background-color: rgb(199, 87, 41);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.bttn:hover {
+  background-color: rgb(230, 110, 60);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(170, 100, 50, 0.4);
+}
+  @media (max-width: 1000px) {
+   .bttn{
+      margin-top: 3px;
+      font-size: 23px;
+      
+   }
+  }
+
+
+/*footer*/
+ /*footer*/
+ 
+ .info-box {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: justify;
+}
+.footer {
+  
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+background-color: rgb(235, 245, 250);
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 0px;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.footer-section {
+  margin: 15px 0;
+  min-width: 200px;
+  text-align: justify;
+}
+
+.footer-dropdown {
+  margin-top: 10px;
+}
+
+.footer-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 7px 0;
+  color: black;
+}
+
+.footer-toggle:hover {
+  color: rgb(199, 87, 41);
+}
+
+.footer-dropdown-content {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  transition: height 0.4s ease;
+}
+
+.footer-dropdown-content a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-dropdown-content a:hover {
+  color: rgb(72, 209, 204);
+}
+
+.footer-dropdown.open .footer-dropdown-content {
+  height: auto;
+}
+
+.footer-dropdown.open .dropdown-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+
+.footer-section h2 {
+  
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  
+}
+.footer-section p, .footer-section ul, .footer-section li {
+  
+  
+  font-size: 25px;
+  
+}
+.footer-section a {
+  color: #282828;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section a:hover {
+  color: rgb(199, 87, 41);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
+}
+.social-icons svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.social-icons svg:hover {
+  transform: scale(1.1);
+}
+.footer-bottom {
+  
+  
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  
+  text-align: center;
+  color: black;
+}
+.footer-bottom p{
+  text-align: center;
+  
+}
+@media (min-width:1000px) {
+  .footer-section h2 {
+  font-size: 20px;
+   
+}
+.footer-toggle{
+  margin-top: 20px;
+  font-size: 17px;
+}
+.footer-section p, .footer-section ul, .footer-section li {
+  
+  line-height: 2.5;
+  font-size: 17px;
+  
+}
+.footer-bottom {
+  margin-top: 20px;
+  
+  
+  padding-top: 10px;
+  
+}
+.footer-bottom p{
+font-size: 13px;
+}
+  
+}
+@media (max-width: 1000px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 25px;
+  }
+  .footer-section h2 {
+  font-size: 27px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.footer-section p, .footer-section ul, .footer-section li {
+  list-style: none;
+  line-height: 1.5;
+  font-size: 25px;
+  margin-left: 30px;
+}
+.footer-toggle{
+  font-size: 25px;
+  margin-left: 30px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+.footer-dropdown-content a {
+font-size: 25px;
+margin-left: 50px;
+line-height: 2;
+}
+
+
+
+.footer-bottom p{
+  
+  font-size: 15px;
+  
+  
+  
+}
+}
+

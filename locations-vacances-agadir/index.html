@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+<head>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVLYZKLKX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PYVLYZKLKX');
+</script>
+    <title>Locations de Vacances à Agadir | StayGuide </title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Marnissi Youssef">
+  <meta name="description" content="Découvrez nos logements à Agadir, parfaits pour vos vacances au Maroc. Réservez dès maintenant et profitez de la beauté d'Agadir avec StayGuide.">
+  <link rel="icon" type="image/png" sizes="64x64" href="../images/logo-64x64.png">
+  <link rel="canonical" href="https://www.stayguide.ma/locations-vacances-agadir/">
+  
+  <!-- Open Graph (OG) pour les réseaux sociaux -->
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:title" content="Locations de vacances à Agadir – Séjours inoubliables | StayGuide" />
+  <meta property="og:description" content="Trouvez et réservez vos logements à Agadir avec StayGuide. Explorez les meilleures options de locations de vacances et profitez de votre séjour." />
+  <meta property="og:image" content="https://www.stayguide.ma/images/agadir_cover.jpg" />
+  <meta property="og:url" content="https://www.stayguide.ma/locations-vacances-agadir/" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Stay Guide",
+  "url": "https://www.stayguide.ma/locations-vacances-agadir/",
+  "logo": "https://www.stayguide.ma/images/logo-64x64.png"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Stay Guide",
+  "url": "https://www.stayguide.ma/locations-vacances-agadir/",
+  "logo": "https://www.stayguide.ma/images/logo-64x64.png",
+  "sameAs": [
+    "https://www.facebook.com/StayGuide",
+    "https://www.instagram.com/stayguide.ma"
+  ]
+}
+</script>
+  <!-- Twitter Card pour l'affichage sur Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Locations de vacances à Agadir – Séjours inoubliables | StayGuide">
+  <meta name="twitter:description" content="Explorez nos logements à Agadir et réservez votre maison de vacances idéale avec StayGuide.">
+  <meta name="twitter:image" content="https://www.stayguide.ma/images/locations-vacances-agadir_cover.jpg">
+
+    <link rel="stylesheet" href="agadir.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="javascript" href="agadir.js">
+</head>
+<body class="body">
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+      <div class="header" id="mainHeader">
+    <img id="logo" class="logo" src="../images/okri.png" alt="stayguide"/>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="header-links" id="navLinks">
+        <a href="../">Accueil</a>
+
+        <div class="dropdown" id="dropdown-hebergements">
+      <a href="javascript:void(0)" onclick="toggleDropdown('hebergementsDropdown', 'dropdown-hebergements')">
+        <span class="dropdown-toggle">
+          Hébergements   
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+          </svg>
+        </span>
+      </a>
+      <div class="fullwidth-dropdown-content" id="hebergementsDropdown">
+        <a href="../locations-vacances-agadir/">Agadir</a>
+        <a href="../locations-vacances-marrakech/">Marrakech</a>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-guide">
+      <a href="javascript:void(0)" onclick="toggleDropdown('guideDropdown', 'dropdown-guide')">
+        <span class="dropdown-toggle">
+          Guide
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+          </svg>
+        </span>
+      </a>
+      <div class="fullwidth-dropdown-content" id="guideDropdown">
+        <a href="../guide-agadir/">Agadir</a>
+        <a href="../guide-marrakech/">Marrakech</a>
+      </div>
+    </div>
+
+        <a href="../a-propos/">À propos</a>
+    </div>
+</div>
+   
+<style>
+  .coming-soon-section {
+    background: rgb(235, 245, 250);
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 80px 40px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    color: #333;
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+    
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .coming-soon-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #004e4e;
+  }
+
+  .coming-soon-section .description {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .service-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #dde6ec;
+}
+  .servicee-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #dde6ec;
+  align-items: center;
+}
+.servicee-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.servicee-card i {
+  font-size: 2.5rem;
+  color: #007f7f; /* Teal profond, harmonieux avec le fond */
+  margin-bottom: 15px;
+}
+
+.servicee-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #003c3c; /* Plus profond pour lisibilité */
+  font-weight: 600;
+}
+
+.servicee-card p {
+  font-size: 1rem;
+  color: #333; /* Plus sombre pour lisibilité sur fond clair */
+  line-height: 1.5;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: #007f7f; /* Teal profond, harmonieux avec le fond */
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #003c3c; /* Plus profond pour lisibilité */
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #333; /* Plus sombre pour lisibilité sur fond clair */
+  line-height: 1.5;
+}
+
+  .launch-date {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #007f7f;
+  }
+  @media (min-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .center-card {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%; /* Ajustable selon le design */
+  }
+}
+
+@media (max-width: 1000px) {
+   .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .center-card {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%; /* Ajustable selon le design */
+
+  }
+}
+
+  @media (max-width: 1000px) {
+    
+  
+  .service-card {
+    width: 90%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    height: 370PX
+  }
+.service-card p {
+  font-size: 1.5rem;
+  color: #333; /* Plus sombre pour lisibilité sur fond clair */
+  line-height: 2;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #003c3c; /* Plus profond pour lisibilité */
+  font-weight: 600;
+}
+.servicee-card {
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+    height: 340PX
+  }
+.servicee-card p {
+  font-size: 1.5rem;
+  color: #333; /* Plus sombre pour lisibilité sur fond clair */
+  line-height: 2;
+}
+
+.servicee-card h3 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #003c3c; /* Plus profond pour lisibilité */
+  font-weight: 600;
+}
+.launch-date {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+  
+</style>
+
+<div class="coming-soon-section">
+  <h2>Lancement officiel : À venir bientôt</h2>
+  <p class="description">Découvrez une nouvelle manière de voyager à Agadir : hébergements + guides + services intégrés.</p>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <i class="fas fa-home"></i>
+      <h3>Hébergements variés</h3>
+      <p>Villas de luxe, appartements modernes ou maisons traditionnelles — trouvez votre lieu de séjour idéal.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-star"></i>
+      <h3>Expérience locale garantie</h3>
+      <p>Nos services sont pensés pour offrir un séjour immersif, culturel et inoubliable à nos voyageurs.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-cogs"></i>
+      <h3>Méthode de réservation</h3>
+      <p>Réservation facile via WhatsApp, calendrier des disponibilités à jour et confirmation rapide — tout est simplifié pour vous !</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fas fa-credit-card"></i>
+      <h3>Paiement sécurisé</h3>
+      <p>Payez en toute tranquillité le jour de votre location, le règlement s’effectue en espèces à la remise des clés, sans frais supplémentaires.</p>
+    </div>
+
+    
+    <div class="servicee-card center-card">
+  <i class="fas fa-users"></i>
+  <h3>Propriétaires bienvenus</h3>
+  <p>Vous avez un logement à louer à Agadir ? Rejoignez notre plateforme pour plus de visibilité et de simplicité.</p>
+  <a class="bttn" href="https://wa.me/212660024649?text=Bonjour, je souhaite mettre mon logement sur StayGuide" target="_blank" >
+    Contactez-nous
+  </a>
+</div>
+  </div>
+
+  <p class="launch-date">Votre prochain séjour commence ici.</p>
+</div>
+
+
+
+
+
+  
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>À propos</h2>
+                <p><a href="../a-propos/">En savoir plus sur StayGuide</a></p>
+                <p><a href="../a-propos/#contact">Contactez-nous</a></p>
+                <p><a href="../a-propos/#conditions">Conditions et politiques</a></p>
+                <p><a href="../a-propos/#aide">Aide et assistance</a></p>
+                <p><a href="../a-propos/#ajouter"><span style="font-weight: 600;">Vous avez un logement ? Rejoignez-nous</span></a></p>
+            </div>
+            <div class="footer-section">
+  <h2>Découvrez</h2>
+
+  <div class="footer-dropdown">
+    <div class="footer-toggle" onclick="toggleFooterDropdown('hebergementFooterDropdown', this)">
+      <span>Hébergements</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" style="margin-left: 20px;" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"/>
+      </svg>
+    </div>
+    <div class="footer-dropdown-content" id="hebergementFooterDropdown">
+      <a href="../locations-vacances-agadir/">Agadir</a>
+      <a href="../locations-vacances-marrakech/">Marrakech</a>
+    </div>
+  </div>
+
+  <div class="footer-dropdown">
+    <div class="footer-toggle" onclick="toggleFooterDropdown('guideFooterDropdown', this)">
+      <span>Guide</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"/>
+      </svg>
+    </div>
+    <div class="footer-dropdown-content" id="guideFooterDropdown">
+      <a href="../guide-agadir/">Agadir</a>
+      <a href="../guide-marrakech/">Marrakech</a>
+    </div>
+  </div>
+</div>
+            <div class="footer-section">
+                <h2>Suivez-nous</h2>
+                <div class="social-icons">
+                    <svg class="facebook" onclick='window.location.href="https://www.facebook.com/StayGuide/"' xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg>
+                    <svg class="instagram" onclick='window.location.href="https://www.instagram.com/stayguide.ma/"' xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0, 1); transform: msFilter"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 StayGuide. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+    <script src="agadir.js"></script>
+</html>    
