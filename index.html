@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+<head>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVLYZKLKX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PYVLYZKLKX');
+</script>
+  <title>StayGuide - Locations de vacances et guide de voyage au Maroc</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Marnissi Youssef">
+  <meta name="title" content="Stay Guide">
+  <meta name="description" content="Réservez facilement votre maison de vacances au Maroc avec StayGuide et explorez nos guides pour un séjour serein et réussi.">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/logo-64x64.png">
+    <link rel="canonical" href="https://www.stayguide.ma/">
+    <meta property="og:locale" content="fr_FR" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Stay Guide",
+  "url": "https://www.stayguide.ma",
+  "logo": "https://www.stayguide.ma/images/logo-64x64.png"
+}
+</script>
+
+    <!-- Titre de la page (comme un titre accrocheur) -->
+<meta property="og:title" content="StayGuide - Locations de vacances et guide de voyage au Maroc" />
+
+<!-- Description courte (résumé attrayant) -->
+<meta property="og:description" content="Trouvez la maison parfaite pour vos vacances au Maroc et découvrez les plus beaux endroits à visiter avec StayGuide." />
+
+<!-- Lien vers une image représentative (grande et belle) -->
+<meta property="og:image" content="https://www.stayguide.ma/images/cover.jpg" />
+
+<!-- Lien vers ta page web -->
+<meta property="og:url" content="https://www.stayguide.ma/" />
+
+<!-- Type du contenu -->
+<meta property="og:type" content="website" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="StayGuide - Locations de vacances et guide de voyage au Maroc">
+<meta name="twitter:description" content="Trouvez la maison parfaite pour vos vacances au Maroc et découvrez les plus beaux endroits à visiter avec StayGuide.">
+<meta name="twitter:image" content="https://www.stayguide.ma/images/cover.jpg">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+     
+      <div class="header" id="mainHeader">
+    <img id="logo" class="logo" src="images/okri.png" alt="stayguide"/>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="header-links" id="navLinks">
+        <a href="../">Accueil</a>
+
+        <div class="dropdown" id="dropdown-hebergements">
+      <a href="javascript:void(0)" onclick="toggleDropdown('hebergementsDropdown', 'dropdown-hebergements')">
+        <span class="dropdown-toggle">
+          Hébergements   
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+          </svg>
+        </span>
+      </a>
+      <div class="fullwidth-dropdown-content" id="hebergementsDropdown">
+        <a href="../AGADIRR/">Agadir</a>
+        <a href="../locations-vacances-marrakech/">Marrakech</a>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-guide">
+      <a href="javascript:void(0)" onclick="toggleDropdown('guideDropdown', 'dropdown-guide')">
+        <span class="dropdown-toggle">
+          Guide
+          <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+          </svg>
+        </span>
+      </a>
+      <div class="fullwidth-dropdown-content" id="guideDropdown">
+        <a href="../guide-agadir/">Agadir</a>
+        <a href="../guide-marrakech/">Marrakech</a>
+      </div>
+    </div>
+
+        <a href="../a-propos/">À propos</a>
+    </div>
+</div>
+    
+    
+   
+
+<!-- slide -->
+
+<div class="slider-container" id="sliderContainer">
+    <div class="slider" id="slider">
+      <figure>
+        <div class="slide">
+          <img src="images/image-slide-1.webp" loading="lazy" alt="Maison à Agadir">
+          
+          <div class="slide-content">
+            <h1>Réservez votre logement idéal dès maintenant avant votre déplacement</h1>
+            <div class="select-box1">
+              <select id="ville1" required>
+                <option value="agadir">Agadir</option>
+                <option value="Marrakech">Marrakech</option>
+              </select>
+              <button onclick="redirectHebergement()">Hébergements</button>
+            </div>
+  
+            <h1>Regardez ce qui vous attend lors de votre visite</h1>
+            <div class="select-box2">
+              <select id="ville2" required>
+                <option value="agadir">Agadir</option>
+                <option value="Marrakech">Marrakech</option>
+              </select>
+              <button class="button1" onclick="redirectGuide()">Guide</button>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+
+      
+
+
+
+
+  
+
+
+ 
+
+  
+ 
+
+<!-- pourquoi nous choisir -->
+
+<section class="why-choose-us hidden" id="whyChooseUs">
+    <h2 class="question">Pourquoi Nous Choisir ?</h2>
+    <div class="features-slider">
+        <div class="features-wrapper">
+            <div class="features">
+                <div class="feature">
+                    <h2><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#48d1cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></h2>
+                    <h1>Guide Personnalisé</h1>
+                    <p>Un guide dédié pour vous accompagner selon vos besoins et vos envies.</p>
+                </div>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <h2><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#48d1cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-house-icon lucide-map-pin-house"><path d="M15 22a1 1 0 0 1-1-1v-4a1 1 0 0 1 .445-.832l3-2a1 1 0 0 1 1.11 0l3 2A1 1 0 0 1 22 17v4a1 1 0 0 1-1 1z"/><path d="M18 10a8 8 0 0 0-16 0c0 4.993 5.539 10.193 7.399 11.799a1 1 0 0 0 .601.2"/><path d="M18 22v-3"/><circle cx="10" cy="10" r="3"/></svg></h2>
+                    <h1>Emplacements stratégiques</h1>
+                    <p>Nos logements sont situés dans les quartiers les plus populaires de la ville.</p>
+                </div>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <h2><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#48d1cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star-icon lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg></h2>
+                    <h1>Expériences Uniques</h1>
+                    <p>Nous vous assurons une meilleure expérience en mettant à votre disposition un guide personnel.</p>
+                </div>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <h2><svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#48d1cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></h2>
+                    <h1>Assistance 24/7</h1>
+                    <p>Notre équipe est toujours prête à vous aider, à tout moment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- card dis -->
+         <div class="dispo" >
+           <h4> ville disponible</h4>
+    
+         </div>
+
+        <div class="ccdis">
+  <div class="carddis active">
+    <div class="carddis-img-container">
+      <img src="images/agadir-card-matin.webp" loading="lazy" alt="Agadir" class="carddis-img">
+    </div>
+    <div class="carddis-content">
+      <h2 class="carddis-title">Agadir</h2>
+      <p class="carddis-description">
+        Découvrez les meilleures options d’hébergement à Agadir et accédez à un guide complet pour explorer la ville et ses environs.
+      </p>
+      <div class="card-buttons">
+        <a class="card-btndis" href="../locations-vacances-agadir/">Hébergements</a>
+        <a class="card-btndis" href="../guide-agadir/">Guide</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="carddis">
+    <div class="carddis-img-container">
+      <img src="images/marrakech-card-soir.webp" loading="lazy" alt="Marrakech" class="carddis-img">
+    </div>
+    <div class="carddis-content">
+      <h2 class="carddis-title">Marrakech</h2>
+      <p class="carddis-description">
+        Explorez les meilleures adresses où séjourner à Marrakech et laissez-vous guider à travers les trésors de la ville rouge et ses environs.
+      </p>
+      <div class="card-buttons">
+        <a class="card-btndis" href="../locations-vacances-marrakech/">Hébergements</a>
+        <a class="card-btndis" href="../guide-marrakech/">Guide</a>
+      </div>
+    </div>
+  </div>
+  <div class="dot-container">
+    <span class="dot active-dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+   
+
+ <div class="logement-section apparition" id="carrouselSection">
+    <h2>Profitez d’un large choix de logements</h2>
+
+    
+    
+    <div class="carousel-container">
+      <button class="nav-arrow nav-left" onclick="shiftCarousel(-1)">‹</button>
+    
+      <div class="carousel-viewport">
+        <div class="carousel-items" id="carouselItems">
+          <!-- 8 LOGEMENTS -->
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+          <div class="housing-card"><div class="housing-inner"><img src="images/venir.webp" alt="agadir"><div class="housing-title">À venir</div><div class="housing-text">Août 2025</div></div></div>
+
+        </div>
+      </div>
+    
+      <button class="nav-arrow nav-right" onclick="shiftCarousel(1)">›</button>
+    
+      <div class="carousel-indicators" id="carouselIndicators"></div>
+    </div>
+    
+    <div class="reserver"><a href="../locations-vacances-agadir/">Découvrez</a></div>
+    </div>
+    
+    
+  
+  
+
+
+  <section class="guide-section">
+    <h2 class="guide-title">Guide de voyage</h2>
+  
+    <div class="parcours-container">
+      <button class="btn-nav gauche" onclick="defilerCartes(-1)">‹</button>
+  
+      <div class="conteneur-cartes">
+        <div class="conteneur-parcours" id="conteneurParcours">
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/agadir-card-matin.webp')"><h3>Découvrez Agadir</h3><p>Explorez la culture vibrante de cette perle marocaine.</p></div><a href="../guide-agadir/">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/marrakech-card-soir.webp')"><h3>Découvrez Marrakech</h3><p>Plongez dans l'effervescence de Marrakech au cœur du Maroc.</p></div><a href="../guide-marrakech/">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/tamraght.webp')"><h3>Plages</h3><p>Explorez les plus belles plages d'Agadir.</p></div><a href="../guide-agadir/#plages">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/jamaa-elfna.webp')"><h3>Lieux incontournables</h3><p>Découvrez les incontournables de Marrakech.</p></div><a href="../guide-marrakech/#incontournables">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/ibn-zaidoun.webp')"><h3>Jardins</h3><p>Promenez-vous dans des jardins paisibles.</p></div><a href="../guide-agadir/#jardins">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/elmenara.webp')"><h3>Jardins</h3><p>Évadez-vous dans des oasis de calme.</p></div><a href="../guide-marrakech/#jardins">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/souk-elhad.webp')"><h3>Lieux incontournables</h3><p>Découvrez les joyaux d’Agadir.</p></div><a href="../guide-agadir/#lieux">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/oukaimden.webp')"><h3>Sites naturels</h3><p>Respirez l'air pur des vallées de l'Atlas.</p></div><a href="../guide-marrakech/#natures">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/corniche-anza.webp')"><h3>Corniches</h3><p>Admirez la mer depuis les corniches.</p></div><a href="../guide-agadir/#corniches">En savoir plus</a></div>
+          <div class="carte"><div class="carte-contenu" style="background-image: url('images/paradis.webp')"><h3>Paradis</h3><p>Évadez-vous vers un coin de paradis.</p></div><a href="../guide-agadir/#Paradis">En savoir plus</a></div>
+
+        </div>
+      </div>
+  
+      <button class="btn-nav droite" onclick="defilerCartes(1)">›</button>
+    </div>
+  
+    <div class="points-navigation" id="pointsNavigation"></div>
+  </section>
+  
+
+
+<!-- card indis -->          
+        <div class="indispo" >
+            <h4>bientôt disponible</h4>
+            
+        </div>  
+
+
+        <div class="cc">
+           
+            <div class="card">
+                <img loading="lazy" src="images/rabat-card-matin.webp" alt="Rabat" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Rabat</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                    
+                </div>
+                
+            </div>
+
+            <div class="card">
+                <img loading="lazy" src="images/casablanca-card-soir.webp" alt="Casablanca" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Casablanca</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+
+            <div class="card">
+                <img loading="lazy" src="images/tanger-card-matin.webp" alt="Tanger" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Tanger</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+        </div>    
+        <div class="cc">
+            <div class="card">
+                <img loading="lazy" src="images/chefchaoun-card-matin.webp" alt="Chefchaoun" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Chefchaoun</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img loading="lazy" src="images/essaouira-card-soir.webp" alt="Essaouira" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Essaouira</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img loading="lazy" src="images/fes-card-soir.webp" alt="Fès" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Fès</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+        </div>    
+        <div class="cc">
+            
+            <div class="card">
+                <img loading="lazy" src="images/ifrane-card-matin.webp" alt="Ifrane" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Ifrane</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img loading="lazy" src="images/eljadida-card-matin.webp" alt="El Jadida" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">El Jadida</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+            
+            <div class="card">
+                <img loading="lazy" src="images/tetouan-card-matin.webp" alt="Tetouan" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Tetouan</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+        </div>   
+        <div class="cc">
+            <div class="card">
+                <img loading="lazy" src="images/dakhla-card-matin.webp" alt="Dakhla" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Dakhla</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img loading="lazy" src="images/ouarzazate-card-soir.webp" alt="Ouarzazate" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Ouarzazate</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible </a>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img loading="lazy" src="images/alhoceima-card-matin.webp" alt="Alhoceïma" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title">Alhoceïma</h2>
+                    <p class="card-description"></p>
+                    <a class="card-btn" >indisponible</a>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+
+
+<!-- SECTION COMPTEUR -->
+<section style="background: rgb(255, 255, 255); padding: 50px 20px; text-align: center; box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);">
+  <h2 style="margin-bottom: 70px; font-size: 1.5rem;">Ils nous ont fait confiance cet été 2025... <br>À votre tour de vivre l'expérience !</h2>
+  
+  <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+    
+    <div>
+      <div class="counter" data-target="5" style="font-size: 2.5rem; font-weight: bold;">0</div>
+      <p>Guide partenaires</p>
+    </div>
+
+    <div>
+      <div class="counter" data-target="27" style="font-size: 2.5rem; font-weight: bold;">0</div>
+      <p>Clients satisfaits</p>
+    </div>
+
+    
+
+    <div>
+      <div class="counter" data-target="2" style="font-size: 2.5rem; font-weight: bold;">0</div>
+      <p>destination</p>
+    </div>
+    
+  </div>
+</section>
+
+<!-- SCRIPT ANIMATION COMPTEUR -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll('.counter');
+
+  function animateCounter(counter) {
+    const target = parseFloat(counter.getAttribute('data-target'));
+    let current = 0;
+    const speed = target / 100; // Vitesse de l'animation
+    
+    const update = () => {
+      current += speed;
+      if (current < target) {
+        counter.innerText = Math.floor(current);
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    update();
+  }
+
+  // Observer pour déclencher l'animation quand la section devient visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target); // Désactive l'observation une fois l'animation terminée
+      }
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(counter => {
+    observer.observe(counter);
+  });
+});
+</script>
+
+
+
+
+
+ 
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>À propos</h2>
+            <p><a href="/a-propos/">En savoir plus sur StayGuide</a></p>
+            <p><a href="/a-propos/#contact">Contactez-nous</a></p>
+            
+            <p><a href="/a-propos/#conditions">Conditions et politiques</a></p>
+            <p><a href="/a-propos/#aide">Aide et assistance</a></p>
+            <p><a href="/a-propos/#ajouter"><span style="font-weight: 600;">Vous avez un logement ? Rejoignez-nous</span></a></p>
+        </div>
+        <div class="footer-section">
+  <h2>Découvrez</h2>
+
+  <div class="footer-dropdown">
+    <div class="footer-toggle" onclick="toggleFooterDropdown('hebergementFooterDropdown', this)">
+      <span>Hébergements</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" style="margin-left: 20px;" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"/>
+      </svg>
+    </div>
+    <div class="footer-dropdown-content" id="hebergementFooterDropdown">
+      <a href="../locations-vacances-agadir/">Agadir</a>
+      <a href="../locations-vacances-marrakech/">Marrakech</a>
+    </div>
+  </div>
+
+  <div class="footer-dropdown">
+    <div class="footer-toggle" onclick="toggleFooterDropdown('guideFooterDropdown', this)">
+      <span>Guide</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"/>
+      </svg>
+    </div>
+    <div class="footer-dropdown-content" id="guideFooterDropdown">
+      <a href="../guide-agadir/">Agadir</a>
+      <a href="../guide-marrakech/">Marrakech</a>
+    </div>
+  </div>
+</div>
+        <div class="footer-section">
+            <h2>Suivez-nous</h2>
+            <div class="social-icons">
+                <svg class="facebook" onclick='window.location.href="https://www.facebook.com/StayGuide/"' xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"></path></svg>
+                <svg class="instagram" onclick='window.location.href="https://www.instagram.com/stayguide.ma/"' xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill:rgb(0, 0, 0, 1); transform: msFilter"><path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path><circle cx="16.806" cy="7.207" r="1.078"></circle><path d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"></path></svg>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 StayGuide. Tous droits réservés.</p>
+    </div>
+</footer>
+       
+             
+            
+<script src="script.js"></script>
+        
+</body>
+
+
+
+</html>
